@@ -128,3 +128,38 @@ int arr_buscarNumeroInt(int* array,int limite,int numeroBuscado)
 	}
 	return retorno;
 }
+
+void arr_getIntegers(int* array,int limite, char* pTexto,char* pTextoError, int reintentos, int minimo, int maximo)
+{
+	for(int i=0;i<limite;i++)
+	{
+		utn_getInteger(&array[i], pTexto, pTextoError, reintentos, minimo, maximo);
+	}
+
+}
+
+void arr_burbujeo(int* array,int limite,int* arrayOrdenado)
+{
+	int arrayAuxiliar[limite];
+	int aux;
+	for(int i=0;i<limite;i++)
+	{
+		arrayAuxiliar[i]=array[i];
+	}
+	for(int i=0;i<limite-1;i++)
+	{
+		for(int j=i+1;j<limite;j++)
+		{
+			if(arrayAuxiliar[i]>arrayAuxiliar[j])
+			{
+				aux=arrayAuxiliar[i];
+				arrayAuxiliar[i]=arrayAuxiliar[j];
+				arrayAuxiliar[j]=aux;
+			}
+		}
+	}
+	for(int i=0;i<limite;i++)
+	{
+		arrayOrdenado[i]=arrayAuxiliar[i];
+	}
+}
