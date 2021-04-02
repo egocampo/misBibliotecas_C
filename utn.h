@@ -17,6 +17,8 @@
 int utn_getInteger(int* pNumeroSolicitado,char* pTexto,char* pTextoError,int reintentos, int minimo, int maximo);
 int utn_getFloat(float* pNumeroSolicitado,char* pTexto,char* pTextoError,int reintentos, int minimo, int maximo);
 int utn_getChar(char* pCaracterSolicitado,char* pTexto,char* pTextoError,int reintentos, char opcionUno, char opcionDos);
+int utn_getIntWithoutMinimumOrMaximum(int* pNumeroSolicitado,char* pTexto,char* pTextoError,int reintentos);
+int utn_getFloatWithoutMinimumOrMaximum(float* pNumeroSolicitado,char* pTexto,char* pTextoError,int reintentos);
 
 
 #endif /* UTN_H_ */

@@ -9,6 +9,9 @@
 #include <stdlib.h>
 #include <stdio_ext.h>
 #include "utn.h"  // lo incluimos por si otra funcion tambien lo usa
+#include "array.h"
+#include "matematicas.h"
+
 
 /*
  * utn_getInteger: pide un numero entero al usuario y lo valida con reintentos
@@ -146,6 +149,30 @@ int utn_getFloatWithoutMinimumOrMaximum(float* pNumeroSolicitado,char* pTexto,ch
 		printf("%s",pTexto);
 		__fpurge(stdin);
 		if(scanf("%f",&numeroSolicitado)==1) // scanf retorna las variables que puede convertir, si no devuelve una hay un error, ej al poner "hola"
+		{
+			*pNumeroSolicitado=numeroSolicitado;
+			retorno=0;
+			break;
+		}
+		else
+		{
+			printf("%s\n",pTextoError);
+			reintentos--;
+			retorno=-1;
+		}
+	}while(reintentos>0);
+	return retorno;
+}
+
+int utn_getIntWithoutMinimumOrMaximum(int* pNumeroSolicitado,char* pTexto,char* pTextoError,int reintentos)
+{
+	int retorno=0;
+	int numeroSolicitado;
+	do
+	{
+		printf("%s",pTexto);
+		__fpurge(stdin);
+		if(scanf("%d",&numeroSolicitado)==1) // scanf retorna las variables que puede convertir, si no devuelve una hay un error, ej al poner "hola"
 		{
 			*pNumeroSolicitado=numeroSolicitado;
 			retorno=0;

@@ -14,6 +14,5 @@ int utn_divisionNumbers(float numberOne,float numberTwo, float* divisionResult);
 int utn_multiplicationNumbers(float numberOne,float numberTwo, float* multiplicationResult);
 int utn_factorialNumber(float number, long long int* factorial);
 int utn_isInt(float number);
-int utn_getFloatWithoutMinimumOrMaximum(float* pNumeroSolicitado,char* pTexto,char* pTextoError,int reintentos);
 
 #endif /* MATEMATICAS_H_ */
