@@ -14,8 +14,8 @@
 //////////////////////////////////////////////
 //-------------------------------------------------------------------------------------------------------
 // INGRESO DE DATOS
-int arr_getIntSimple(int* pArray,int len, char* pTexto,char* pTextoError, int reintentos);
-int arr_getIntWithMinMax(int* array,int limite, char* pTexto,char* pTextoError, int reintentos, int minimo, int maximo);
+int arr_getIntSimple(int* pArray,int len);
+int arr_getIntWithMinMax(int* array,int limite, char* pTexto,char* pTextoError, int minimo, int maximo, int reintentos);
 int arr_getIntShowingPosition(int* pArray, int len,char* pText);
 //-------------------------------------------------------------------------------------------------------
 // ORDENAMIENTO
